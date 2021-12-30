@@ -1,3 +1,4 @@
+#thisis just a basic script to check if it works.
 import requests
 url = "https://geraldinetop10.co.nz/wp-content/plugins/admin-menu-editor-pro/readme.txt"
 
@@ -8,7 +9,7 @@ if url.endswith('.txt'):
     print("Trying to write content to disk.")
     try:
         print("\nWriting file to disk.")
-        open('D:/Projects/File Downloader Python/Downloads/readme.txt', 'wb').write(r.content)
+        open('readme.txt', 'wb').write(r.content)
         print("\nFile written to disk.")
     except:
         print("\nCould not write file to disk.")
