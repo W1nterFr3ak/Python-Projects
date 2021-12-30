@@ -14,6 +14,7 @@ def download(data, url):
         #give custom name if filename is empty.
         if filename == "":
             print("File has no name.")
+            #try to save the file to disk.
             try:
                 filename2 = input("Save file as? e.g index.html, index.jpg :")
                 print("Saving file to disk.")
@@ -21,20 +22,23 @@ def download(data, url):
                 open(filename2, "wb").write(data.content)
                 #show where the fie has been saved.
                 print("File saved in ", os.path.abspath(filename))
+            #handle any errors that occur.
             except:
                 print("An unexpected error has ocurred.")
         
         elif filename != "":
             print("Filename: ",filename)
+            #try to save the file to disk.
             try:
                 print("Saving file to disk.")
                 open(filename, "wb").write(data.content)
                 #show where the file has been saved.
                 print("File saved to ", os.path.abspath(filename))
+            #handle any errors that occur.
             except:
                 print("An unexpected error occurred. File not saved.")
 
-#make requests for ecah url given and allow redirects.
+#make requests for each url given and allow redirects.
 def main():
     global url
     print("starting script")
