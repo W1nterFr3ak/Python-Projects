@@ -5,8 +5,15 @@ import sys
 if len(sys.argv) <2:
     print("Usage: client.py ip port ")
     exit()
-
+#banner.
+print("\n\t########  ###  ###  ########  ###  ###  ########  ###    ###")
+print("\t########  ###  ###  ########  ###  ###  ###  ###  ## #   ###")
+print("\t########  ###  ###  ##        ########  ###  ###  ### #  ###    client v1.0")
+print("\t########  ########  ##        ########  ########  ###  # ###    by P4rsz and W1nterFr3ak")
+print("\t####           ###  ########  ###  ###  ###  ###  ###   # ##    email: parsz@protonmail.com WinterFreak@protonmail.com")
+print("\t####      ########  ########  ###  ###  ###  ###  ###    ###\n")
 #host and port.
+
 host = sys.argv[1]
 port = sys.argv[2]
 
