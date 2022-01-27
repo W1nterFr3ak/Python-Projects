@@ -1,4 +1,4 @@
-import sockets
+import socket
 import sys
 
 #check if sufficient parameters are met.
