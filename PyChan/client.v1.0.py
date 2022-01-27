@@ -15,12 +15,12 @@ print("\t####      ########  ########  ###  ###  ###  ###  ###    ###\n")
 
 #host and port.
 host = sys.argv[1]
-port = sys.argv[2]
+port = int(sys.argv[2])
 
 #socket object and connect to host.
 server = socket.socket(socket.AF_INET)
 client = server.connect((host, port))
-data = client.recv(1024)
+data = server.recv(1024)
 print("\t",data)
 print("\n\tExiting.\n")
 exit()
