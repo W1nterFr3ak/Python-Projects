@@ -12,12 +12,13 @@ print("\t########  ###  ###  ##        ########  ###  ###  ### #  ###    client 
 print("\t########  ########  ##        ########  ########  ###  # ###    by P4rsz and W1nterFr3ak")
 print("\t####           ###  ########  ###  ###  ###  ###  ###   # ##    email: parsz@protonmail.com WinterFreak@protonmail.com")
 print("\t####      ########  ########  ###  ###  ###  ###  ###    ###\n")
-#host and port.
 
+#host and port.
 host = sys.argv[1]
 port = sys.argv[2]
 
-#connect to host.
+#socket object and connect to host.
+server = socket.socket(socket.AF_INET)
 client = server.connect((host, port))
 data = client.recv(1024)
 print("\t",data)
