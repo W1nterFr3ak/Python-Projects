@@ -1,5 +1,6 @@
 import socket
 import sys
+from threading import thread
 
 #check if sufficient parameters are met.
 if len(sys.argv) <2:
@@ -19,7 +20,7 @@ host = str(sys.argv[1])
 port = int(sys.argv[2])
 
 #server object, binding.
-server = socket.socket(socket.AF_INET)
+server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 server.bind((host, port))
 
 #accept connections
